@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="css/stylecontact.css">
+</head>
+
+<body>
+    <main>
+        <div class="big-wrapper light">
+        <header>
+            <nav class="navbar ">
+              <input type="checkbox" id="check">
+              <label for="check" class="checkbtn">
+                <i class="bx bx-menu"></i>
+              </label>
+              <label class="logo">
+                  <img src="AssetsWebDesign_Techomfest/Logo2.png" alt="">
+              </label>
+              <ul>
+                <li><a href="index.html" >Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="contact2.html" class="active">Contact</a></li>
+              </ul>
+            </nav>
+          </header>
+
+        <section class="contact">
+            <div class="container row" style="display: flex;">
+                <div class="container col-6">
+                    <div class="form-wrapper">
+                        <div class="contact-heading" style="margin-top: 90px;">
+                           <h1>Let's contact we<span>.</span></h1> 
+                        </div>
+
+                        <form action="contact us.html" method="post" class="contact-form">
+                            <div class="input-wrap">
+                                <input class="contact-input" autocomplete="off" name="First Name" type="text" required>
+                                <label>First name</label>
+                                <i class="icon fa-solid fa-address-card"></i>
+                            </div>
+
+                            <div class="input-wrap">
+                                <input class="contact-input" autocomplete="off" name="Last Name" type="text" required>
+                                <label>Last name</label>
+                                <i class="icon fa-solid fa-address-card"></i>
+                            </div>
+
+                            <div class="input-wrap w-100">
+                                <input class="contact-input" autocomplete="off" name="Email" type="email" required>
+                                <label>Email</label>
+                                <i class="icon fa-solid fa-envelope"></i>
+                            </div>
+
+                            <div class="input-wrap textarea w-100">
+                                <textarea name="Message" autocomplete="off" class="contact-input" required></textarea>
+                                <label>Massage</label>
+                                <i class="icon fa-solid fa-inbox"></i>
+                            </div>
+
+                            <div class="contact-buttons w-100">
+                                <button class="btn upload">     
+                                    <input type="submit" value="Send message" class="btn">
+                                    <label for="">Send message</label>
+                                </button>
+                            </div>
+                            
+                           
+                        </form>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="image-wrapper" style="float: right;">
+                        <img src="AssetsWebDesign_Techomfest/batik.png" class="img">
+                        <img src="AssetsWebDesign_Techomfest/garis.png" class="img">
+                    </div>
+                 </div>
+            </div>
+        </section>
+    </div>
+
+        <footer class="footer"> 
+            <div class="container">
+              <div class="row" style="display: flex; margin-left: 50px;">
+                <div class="logo">
+                  <img src="AssetsWebDesign_Techomfest/Logo.png" alt="">
+                </div>
+                <div class="footer-col">
+                  <h4>explore</h4>
+                  <ul>
+                    <li><a href="#">Kesenian</a></li>
+                    <li><a href="#">Baju Adat</a></li>
+                    <li><a href="#">Rumah Adat</a></li>
+                    <li><a href="#">Alat Musik</a></li>
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>Menu</h4>
+                  <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About</a></li>
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>follow us</h4>
+                  <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </footer>
+        
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
