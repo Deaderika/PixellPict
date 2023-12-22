@@ -35,6 +35,8 @@ a {
   text-decoration: none;
 }
 
+
+
 .big-wrapper {
   position: relative;
   padding: 1.7rem 0 2rem;
@@ -58,165 +60,171 @@ a {
   min-height: 100%;
 }
 
-nav {
-  position: absolute;
-  height: 50px;
-  width: 100%;
-  /* background-color: red; */
-  margin-bottom: 3vh;
-  margin-top: -5vh;
-  
-}
-label.logo {
-  padding: 0 80px;
-}
-nav ul {
-  float: right;
-  margin-right: 80px;
-}
-nav ul li {
-  display: inline-block;
-  line-height: 80px;
-}
-nav ul li a {
-  color: var(--lightTwo);
-  font-size: 17px;
-  padding: 7px 13px;
-  border-radius: 13px;
-  /* text-transform: lowercase; */
-}
-a.active, a:hover {
-  /* background: coral; */
-  transition: .5s;
-  color: var(--hoverColor);
-  text-decoration: none;
-}
-.checkbtn {
-  line-height: 80px;
-  font-size: 30px;
-  float: right;
-  cursor: pointer;
-  margin-right: 40px;
-  display: none;
-}
-.checkbtn i {
-  color: var(--white);
-  padding: 5px;
-  border-radius: 10px;
-  transition: .5s ease;
-}
-#check {
-  display: none;
-}
-/* responsove code */
-@media (max-width: 952px) {
-  /* table mode */
-  label.logo {
-    /* padding-left: 50px; */
-  }
-  nav ul li a {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 858px) {
-  /* mobile mode */
-  .checkbtn {
-    display: block;
-  }
-   ul {
-    position: fixed;
+  nav {
+    position: absolute;
+    height: 50px;
     width: 100%;
-    height: 100vh;
-    background: var(--backgroundColor );
-    color: #5B1306;
-    top: 80px;
-    left: -100%;
-    padding-top: 80px;
-    text-align: center;
-    transition: .5s ease;
+    /* background-color: red; */
+    margin-bottom: 3vh;
+    margin-top: -5vh;
+    
+  }
+  label.logo {
+    padding: 0 80px;
+  }
+  nav ul {
+    float: right;
+    margin-right: 80px;
   }
   nav ul li {
-    display: block;
-    margin: 30px 0;
-    line-height: 30px;
+    display: inline-block;
+    line-height: 80px;
   }
   nav ul li a {
-    font-size: 20px;
+    color: var(--lightTwo);
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 13px;
+    /* text-transform: lowercase; */
+    text-decoration: none;
+  }
+  nav ul li a:hover{
+    text-decoration: none;
+    color: #bd9642;
   }
   a.active, a:hover {
-    background: none;
-    color: var(--darkOne);
+    /* background: coral; */
+    transition: .5s;
+    color: var(--hoverColor);
+    text-decoration: underline;
+    text-decoration-color: #000;
   }
-  #check:checked ~ ul {
-    left: 0;
+  .checkbtn {
+    line-height: 80px;
+    font-size: 30px;
+    float: right;
+    cursor: pointer;
+    margin-right: 40px;
+    display: none;
   }
-}
+  .checkbtn i {
+    color: var(--white);
+    padding: 5px;
+    border-radius: 10px;
+    transition: .5s ease;
+  }
+  #check {
+    display: none;
+  }
+  /* responsove code */
+  @media (max-width: 952px) {
+    /* table mode */
+    label.logo {
+      /* padding-left: 50px; */
+    }
+    nav ul li a {
+      font-size: 14px;
+    }
+  }
 
-.select-menu {
-  width: 160px;
-  margin: 20px auto;
-}
-.select-menu .select-btn {
-  display: flex;
-  height: 55px;
-  width: 120px;
-  background: var(--lightTwo);
-  padding: 25px;
-  color: #fff;
-  font-size: 15px;
-  font-weight: 600;
-  text-transform: capitalize;
-  border-radius: 15px;
-  align-items: center;
-  cursor: pointer;
-  justify-content: space-between;
-  box-shadow: 0 0 1px rgba(226, 171, 98, 0.5);
-}
-.select-btn i{
-  font-size: 25px;
-  transition: .3s ease;
-}
-.select-menu.active .select-btn i {
-  transform: rotate(-180deg);
-}
-.select-menu .options {
-  position: relative;
-  padding: 20px;
-  margin-top: 15px;
-  border-radius: 15px;
-  background: #eeebf4;
-  border: 3px solid var(--lightTwo);
-  box-shadow: 0 0 10px rgba(245, 181, 98, 0.2);
-  transition: .3s ease;
-  visibility: hidden;
-  opacity: 0;
-}
-.select-menu.active .options {
-  visibility: visible;
-  opacity: 1;
-}
-.options .option {
-  display: flex;
-  height: 55px;
-  cursor: pointer;
-  padding: 0 20px;
-  border-radius: 15px;
-  align-items: center;
-  background: #eeebf4;
-  transition: .5s ease;
-}
-.options .option:hover {
-  background: #e3dff2;
-}
-.option i {
-  font-size: 30px;
-  margin-right: 12px;
-}
-.option .option-text {
-  font-size: 15px;
-  color: black;
-}
+  @media (max-width: 858px) {
+    /* mobile mode */
+    .checkbtn {
+      display: block;
+    }
+    ul {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: var(--backgroundColor );
+      color: #5B1306;
+      top: 80px;
+      left: -100%;
+      padding-top: 80px;
+      text-align: center;
+      transition: .5s ease;
+    }
+    nav ul li {
+      display: block;
+      margin: 30px 0;
+      line-height: 30px;
+    }
+    nav ul li a {
+      font-size: 20px;
+    }
+    a.active, a:hover {
+      background: none;
+      color: var(--darkOne);
+    }
+    #check:checked ~ ul {
+      left: 0;
+    }
+  }
+
+  .select-menu {
+    width: 160px;
+    margin: 20px auto;
+  }
+  .select-menu .select-btn {
+    display: flex;
+    height: 55px;
+    width: 120px;
+    background: var(--lightTwo);
+    padding: 25px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: capitalize;
+    border-radius: 15px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    box-shadow: 0 0 1px rgba(226, 171, 98, 0.5);
+  }
+  .select-btn i{
+    font-size: 25px;
+    transition: .3s ease;
+  }
+  .select-menu.active .select-btn i {
+    transform: rotate(-180deg);
+  }
+  .select-menu .options {
+    position: relative;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 15px;
+    background: #eeebf4;
+    border: 3px solid var(--lightTwo);
+    box-shadow: 0 0 10px rgba(245, 181, 98, 0.2);
+    transition: .3s ease;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .select-menu.active .options {
+    visibility: visible;
+    opacity: 1;
+  }
+  .options .option {
+    display: flex;
+    height: 55px;
+    cursor: pointer;
+    padding: 0 20px;
+    border-radius: 15px;
+    align-items: center;
+    background: #eeebf4;
+    transition: .5s ease;
+  }
+  .options .option:hover {
+    background: #e3dff2;
+  }
+  .option i {
+    font-size: 30px;
+    margin-right: 12px;
+  }
+  .option .option-text {
+    font-size: 15px;
+    color: black;
+  }
 
 .btn {
   display: inline-block;
@@ -692,6 +700,15 @@ a.active, a:hover {
   /* margin-left: 21vh; */
   margin-top: 10px;
 }
+.btn-42 a{
+  color: black;
+}
+
+.btn-42 a:hover{
+  color: white;
+  text-decoration: none;
+}
+
 .btn-42:disabled {
   cursor: default;
 }

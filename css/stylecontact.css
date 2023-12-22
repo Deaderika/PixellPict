@@ -46,7 +46,7 @@ body{
     justify-content: space-between;
   }
   
-nav {
+  nav {
     position: absolute;
     height: 50px;
     width: 100%;
@@ -72,12 +72,18 @@ nav {
     padding: 7px 13px;
     border-radius: 13px;
     /* text-transform: lowercase; */
+    text-decoration: none;
+  }
+  nav ul li a:hover{
+    text-decoration: none;
+    color: #bd9642;
   }
   a.active, a:hover {
     /* background: coral; */
     transition: .5s;
     color: var(--hoverColor);
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-color: #000;
   }
   .checkbtn {
     line-height: 80px;
@@ -106,13 +112,13 @@ nav {
       font-size: 14px;
     }
   }
-  
+
   @media (max-width: 858px) {
     /* mobile mode */
     .checkbtn {
       display: block;
     }
-     ul {
+    ul {
       position: fixed;
       width: 100%;
       height: 100vh;
@@ -139,6 +145,71 @@ nav {
     #check:checked ~ ul {
       left: 0;
     }
+  }
+
+  .select-menu {
+    width: 160px;
+    margin: 20px auto;
+  }
+  .select-menu .select-btn {
+    display: flex;
+    height: 55px;
+    width: 120px;
+    background: var(--lightTwo);
+    padding: 25px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: capitalize;
+    border-radius: 15px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    box-shadow: 0 0 1px rgba(226, 171, 98, 0.5);
+  }
+  .select-btn i{
+    font-size: 25px;
+    transition: .3s ease;
+  }
+  .select-menu.active .select-btn i {
+    transform: rotate(-180deg);
+  }
+  .select-menu .options {
+    position: relative;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 15px;
+    background: #eeebf4;
+    border: 3px solid var(--lightTwo);
+    box-shadow: 0 0 10px rgba(245, 181, 98, 0.2);
+    transition: .3s ease;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .select-menu.active .options {
+    visibility: visible;
+    opacity: 1;
+  }
+  .options .option {
+    display: flex;
+    height: 55px;
+    cursor: pointer;
+    padding: 0 20px;
+    border-radius: 15px;
+    align-items: center;
+    background: #eeebf4;
+    transition: .5s ease;
+  }
+  .options .option:hover {
+    background: #e3dff2;
+  }
+  .option i {
+    font-size: 30px;
+    margin-right: 12px;
+  }
+  .option .option-text {
+    font-size: 15px;
+    color: black;
   }
 
 
@@ -214,11 +285,11 @@ nav {
     max-width: 30rem;
 }   
 .contact-form{
-    display: grid;
-    margin-top: 2.55rem;
-    grid-template-columns: repeat(2,1fr);
-    column-gap: 2rem;
-    row-gap: 1rem;
+    /* display: grid; */
+    /* margin-top: 2.55rem; */
+    /* grid-template-columns: repeat(2,1fr); */
+    /* column-gap: 2rem;
+    row-gap: 1rem; */
 }
 
 .input-wrap.w-100{
@@ -342,13 +413,13 @@ textarea.contact-input ~ .icon{
 .col-6{
     display: grid;
     grid-template-columns: repeat(1, 2fr);
-    float: right;
+    /* float: right; */
 }
 
 .image-wrapper{
     position: relative;
-    grid-column: 2;
-    background-color: green;
+    /* grid-column: 2; */
+    /* background-color: green; */
 
 }
 
@@ -356,7 +427,6 @@ textarea.contact-input ~ .icon{
     position: absolute;
     height: 100%;
 }
-
 
 
 .footer{
@@ -367,8 +437,14 @@ textarea.contact-input ~ .icon{
   /* position: absolute; */
   background-color: #FFD88A;
 }
+
+.logo-footer{
+  width: 40vh;
+  height: 13vh;
+}
+
 .footer-col{
-   width: 25%;
+   /* width: 25%; */
    padding: 0 90px;
 }
 .footer-col h4{
@@ -376,7 +452,6 @@ textarea.contact-input ~ .icon{
 	color: var(--darkOne);
 	text-transform: capitalize;
 	margin-bottom: 35px;
-	font-weight: 500;
 	position: relative;
 }
 .footer-col h4::before{
@@ -389,24 +464,31 @@ textarea.contact-input ~ .icon{
 	box-sizing: border-box;
 	width: 50px;
 }
-.footer-col ul li:not(:last-child){
+.footer-col ul li{
 	margin-bottom: 10px;
+  list-style: none;
 }
 .footer-col ul li a{
 	font-size: 16px;
 	text-transform: capitalize;
 	color: #ffffff;
 	text-decoration: none;
-	font-weight: 300;
+	font-weight: 450;
 	color: var(--darkOne);
 	display: block;
 	transition: all 0.3s ease;
+  list-style: none;
 }
 .footer-col ul li a:hover{
 	color: #ffffff;
 	padding-left: 8px;
 }
-.footer-col .social-links a{
+
+.social-links{
+  float: left;
+  margin-right: 50px;
+}
+.social-links a{
 	display: inline-block;
 	height: 40px;
 	width: 40px;
@@ -415,12 +497,12 @@ textarea.contact-input ~ .icon{
 	text-align: center;
 	line-height: 40px;
 	border-radius: 50%;
-	color: #ffffff;
+	color: var(--backgroundColor);
 	transition: all 0.5s ease;
 }
-.footer-col .social-links a:hover{
+.social-links a:hover{
 	color: #24262b;
-	background-color: #ffffff;
+	background-color: white;
 }
 
 /*responsive*/

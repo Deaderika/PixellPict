@@ -65,7 +65,6 @@ h4 {
     z-index: 10;
     min-height: 100%;
   }
-
 nav {
     position: absolute;
     height: 50px;
@@ -217,7 +216,7 @@ nav {
   .options .option:hover {
     background: #e3dff2;
   }
-  .option i {
+  .option i { 
     font-size: 30px;
     margin-right: 12px;
   }
@@ -525,7 +524,7 @@ section .heading .subtitle {
     padding: 0.8rem 2.4rem;
     width: fit-content;
     background-color: transparent;
-    border: 1.6px solid #eee;
+    /* border: 1.6px solid #eee; */
     cursor: pointer;
     transition: all 1s ease-in;
     margin-top: 1rem;
@@ -534,7 +533,7 @@ section .heading .subtitle {
 .next .card .content-card .btn-read:hover {
     padding-left: 3rem;
     color: #fff;
-    border: 1.6px solid #fff;
+    /* border: 1.6px solid #fff; */
 
 }
 
@@ -741,8 +740,8 @@ section .heading .subtitle {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    border: 1px solid #eee;
-    border-top: 2px solid #fff;
+    /* border: 1px solid #eee; */
+    /* border-top: 2px solid #fff; */
     border-bottom: 8px solid transparent;
     transition: all 0.9s;
     cursor: pointer;
